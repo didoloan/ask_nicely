@@ -1,0 +1,28 @@
+[package]
+name = "ask_nicely"
+version = "0.1.0-alpha.1"
+edition = "2021"
+description = "A rest client helper library."
+repository = "https://github.com/didoloan/ask_nicely.git"
+homepage = "https://github.com/didoloan/ask_nicely.git"
+license = "MIT"
+
+[features]
+default = ["macros"]
+macros=["nicely_macros"]
+
+[dependencies]
+bytes = "1.9.0"
+nicely_macros = { version="0.1.0-alpha.1", optional=true }
+futures = "0.3.31"
+quick-xml = "0.37.2"
+reqwest = { version = "0.12.12", features = ["json", "multipart", "rustls-tls", "stream"] }
+serde = { version="1.0.217", features=["derive"] }
+serde-xml-rs = "0.6.0"
+serde_json = "1.0.138"
+serde_qs = "0.13.0"
+thiserror = "2.0.11"
+url = "2.5.4"
+
+[dev-dependencies]
+tokio = { version = "1.43.0", features = ["rt", "macros", "net", "time"] }
