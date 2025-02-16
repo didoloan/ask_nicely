@@ -1,10 +1,10 @@
-# api_client
+# ask_nicely
 
-[![Crates.io](https://img.shields.io/crates/v/api_client.svg)](https://crates.io/crates/api_client)
-[![Docs.rs](https://docs.rs/api_client/badge.svg)](https://docs.rs/api_client)
+[![Crates.io](https://img.shields.io/crates/v/api_client.svg)](https://crates.io/crates/ask_nicely)
+[![Docs.rs](https://docs.rs/ask_nicely/badge.svg)](https://docs.rs/ask_nicely)
 <!-- [![Build Status](...)]  and so on... -->
 
-A flexible and easy-to-use API client library... (rest of your README)
+A flexible and easy-to-use API client library
 
 A flexible and easy-to-use API client library for Rust. This crate simplifies interacting with RESTful APIs by providing a structured approach to defining requests, handling authentication, and managing responses.
 
@@ -14,7 +14,7 @@ Add the following to your `Cargo.toml` file:
 
 ```toml
 [dependencies]
-api_client = "0.1.0" // Replace with the latest version
+ask_nicely = "0.1.0" // Replace with the latest version
 # Add other dependencies your crate requires, like tokio,serd, etc.
 ```
 
@@ -35,7 +35,7 @@ api_client = "0.1.0" // Replace with the latest version
 Use the `#[derive(Request)]` macro to define your API requests as structs. Specify the HTTP method, path, authentication requirements, and expected response type.
 
 ```rust
-use api_client::prelude::*;
+use ask_nicely::prelude::*;
 use serde::{Deserialize, Serialize};
 
 #[derive(Request, Serialize, Deserialize, Debug)]
@@ -88,7 +88,7 @@ pub struct MyApiClient;
 
 ## 3. Making Requests
 ```rust
-use api_client::prelude::*;
+use ask_nicely::prelude::*;
 
 
 #[tokio::main]
