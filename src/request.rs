@@ -1,5 +1,6 @@
 pub trait Request<'a>
 where
+    Self: serde::Serialize + 'a,
     Self::Response: serde::de::DeserializeOwned,
     Self::ReqObj: serde::Serialize + 'a,
 {
@@ -15,5 +16,3 @@ where
         crate::api_call::ApiCall::new(self.get_path(), Self::METHOD, self.get_data(), Self::AUTHED)
     }
 }
-
-

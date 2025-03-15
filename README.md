@@ -14,7 +14,7 @@ Add the following to your `Cargo.toml` file:
 
 ```toml
 [dependencies]
-ask_nicely = "0.1.0" // Replace with the latest version
+ask_nicely = "0.1.0-rc.1" // Replace with the latest version
 # Add other dependencies your crate requires, like tokio,serd, etc.
 ```
 
@@ -44,7 +44,7 @@ use serde::{Deserialize, Serialize};
     response = UserResponse,
     method = "GET",
     path = "/users/{id}",
-    get_data = Json
+    get_data = None
 )]
 pub struct GetUser {
     pub id: u32,

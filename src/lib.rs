@@ -11,8 +11,6 @@ pub mod request_data;
 pub mod prelude {
     use super::*;
     pub use crate::request;
-    pub use nicely_macros;
-    pub use nicely_macros::{gen_client, Request};
     pub use api_call::ApiCall;
     pub use api_response::ApiResponse;
     pub use authentication::Authentication;
@@ -20,6 +18,8 @@ pub mod prelude {
     pub use client_builder::ApiClientBuilder;
     pub use errors::Error;
     pub use mutate_req::MutateReq;
+    pub use nicely_macros;
+    pub use nicely_macros::{gen_client, Request};
     pub use request::Request;
     pub use request_data::RequestData;
 }
